@@ -1,0 +1,17 @@
+{
+  "name": "preddiplomka",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"json-server -p 3000 -w db.json\"",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.1.0"
+  },
+  "dependencies": {
+    "json-server": "^0.17.3"
+  }
+}
