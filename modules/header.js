@@ -18,10 +18,10 @@ export function header(place) {
                                 <a href="/">Медиа</a>
                             </li>
                             <li>
-                                <a href="/">Фильмы</a>
+                                <a href="/index.html">Фильмы</a>
                             </li>
                             <li>
-                                <a href="/">Актёры</a>
+                                <a href="/pages/actors.html">Актёры</a>
                             </li>
                             <li>
                                 <a href="/">Новости</a>
