@@ -9,6 +9,8 @@ export function searchModal(open) {
    open.onclick = () => {
       searcmodal.style.display = 'block'
       modalBg.style.display = 'block'
+      searcmodal.classList.add('fade')
+      modalBg.classList.add('fade')
    }
 
    closeModal.onclick = () => {

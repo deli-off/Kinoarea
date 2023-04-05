@@ -5,7 +5,8 @@
         <link rel="icon" type="image/svg+xml" href="/vite.svg">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Kinoarea</title>
-        <link rel="stylesheet" href="./css/style.min.css">
+        <link rel="stylesheet" href="/scss/style.scss">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     </head>
     <body>
         <div id="app">
@@ -112,8 +113,43 @@
                     <img src="./img/Twitter.svg" alt="twitter">
                 </div>
             </div>
+            <div class="container">
+                <div class="type">
+                  <h1>Сейчас в кино</h1>
+                  <div class="probel"></div>
+                  <p>Все</p>
+                  <p>Боевики</p>
+                  <p>Приключения</p>
+                  <p>Комедии</p>
+                  <p>Фантастика</p>
+                  <p>Триллеры</p>
+                  <p>Драма</p>
+                </div>
+              </div>
+              <div class="kino-container"></div>
+                <center>
+                <form action="">
+                  <button class="allfilms">Все новинки</button>
+                </form>
+              </center>
+            </div>
+            <div class="trailers-container" >
+                <iframe id="trailer_video" height="640" src="https://www.youtube.com/embed/HkUKueP-ieE"  frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="scroll-trailers">
+                    <div class="item"></div>
+                </div>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+
         </div>
         <script type="module" src="/main.js"></script>
         <script src="modules/modals.js" type="module"></script>
+        <script src="modules/ui.js" type="module"></script>
     </body>
 </html>
