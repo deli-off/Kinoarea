@@ -18,6 +18,7 @@ authModal(auth_btn);
 
 getData(`movie/upcoming`).then((res) => trailers(res.data.results, scroll_trailers));
 getData(`movie/popular`).then((res) => carousel_reload(res.data.results))
+getData(`person/popular`).then((res) => console.log(res.data.results))
 
 function trailers(arr, place) {
   place.innerHTML = "";
