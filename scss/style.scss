@@ -616,6 +616,7 @@ a {
    height: 100%;
    object-fit: cover;
 }
+
 .swiper-pagination {
    z-index: 1000;
    position: relative;
@@ -668,6 +669,7 @@ a {
          &:hover::before {
             opacity: 1;
          }
+
          span {
             font-size: 24px;
             font-weight: 500;
@@ -675,4 +677,128 @@ a {
          }
       }
    }
+}
+
+
+.trailersCont {
+   width: 80%;
+   max-width: 1920px;
+   margin: 100px auto;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 1%;
+}
+
+
+.itemTrailer {
+   border-radius: 10px;
+   border: 1px solid none;
+   width: 270px;
+   background-size: 100%;
+   background-repeat: no-repeat;
+   height: 360px;
+}
+
+.modalMedia {
+   display: none;
+   width: 800px;
+   height: 530px;
+
+   background-color: #131a2f;
+   border-radius: 20px;
+   border: 2px solid white;
+   position: absolute;
+   top: 300px;
+   left: 50%;
+   transform: translate(-50%, -50%) scale(1);
+   opacity: 0;
+   transition: 1s ease;
+   padding-left: 55px;
+
+   img {
+      position: absolute;
+      top: 20px;
+      right: 15px;
+
+      filter: invert(100%);
+
+      cursor: pointer;
+   }
+
+   iframe {
+      width: 92%;
+      height: 92%;
+      border-radius: 20px;
+      margin-top: 26px;
+   }
+}
+
+
+.top_ofMedia {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 80%;
+   margin: 50px auto;
+
+
+   h1,h4 {
+      color: white;
+   }
+
+   .right_side {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+   }
+}
+
+
+
+.modalPost {
+   display: none;
+   width: 600px;
+   height: 430px;
+
+   background-color: #131a2f;
+   border-radius: 20px;
+   border: 2px solid white;
+   position: absolute;
+   top: 300px;
+   left: 50%;
+   transform: translate(-50%, -50%) scale(1);
+   opacity: 0;
+   transition: 1s ease;
+
+   img {
+      position: absolute;
+      top: 20px;
+      right: 15px;
+
+      filter: invert(100%);
+
+      cursor: pointer;
+   }
+}
+
+
+.postersItem {
+   width: 80%;
+   max-width: 1920px;
+   margin: 300px auto;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 1%;
+
+   
+}
+
+
+.itemPoster {
+   border-radius: 10px;
+   border: 1px solid none;
+   width: 270px;
+   background-size: 100%;
+   background-repeat: no-repeat;
+   height: 360px;
 }

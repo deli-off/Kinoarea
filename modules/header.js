@@ -5,8 +5,8 @@ export function header(place) {
     place.innerHTML += `<header class="header">
                     <div class="header__logo">
                         <div class="header__logo-wrapper">
-                            <img src="./img/header-logo.svg" alt="logo">
-                            <img src="./img/header-social.svg" alt="social">
+                            <img src="/header-logo.svg" alt="logo">
+                            <img src="/header-social.svg" alt="social">
                         </div>
                     </div>
                     <nav class="header__nav">
@@ -15,7 +15,7 @@ export function header(place) {
                                 <a href="/">Афиша</a>
                             </li>
                             <li>
-                                <a href="/">Медиа</a>
+                                <a href="/pages/media.html">Медиа</a>
                             </li>
                             <li>
                                 <a href="/index.html">Фильмы</a>
@@ -36,7 +36,7 @@ export function header(place) {
                     </nav>
                     <div class="header__search">
                         <button class="search-btn">
-                            <img src="./img/search-icon.svg" alt="search">
+                            <img src="/search-icon.svg" alt="search">
                         </button>
                         <button type="button" class="auth-btn">
                             Войти
