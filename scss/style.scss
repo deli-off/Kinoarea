@@ -185,6 +185,8 @@ a {
    }
 
    .films {
+      overflow-y: scroll;
+      height: 700px;
       .box {
          cursor: pointer;
          display: flex;
@@ -197,6 +199,10 @@ a {
 
          &:active {
             scale: 0.8;
+         }
+         .film-img img {
+            width: 200px;
+            height: 200px;
          }
 
          .film-info {
@@ -228,6 +234,10 @@ a {
                line-height: 14px;
                color: #f2f60f;
                margin-top: 5px;
+               text-overflow: ellipsis;
+               overflow: hidden;
+               white-space: nowrap;
+               width: 300px;
             }
          }
       }

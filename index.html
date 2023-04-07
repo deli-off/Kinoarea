@@ -15,17 +15,19 @@
             <div class="modal search-modal">
                 <form name="searchForm" class="searchForm">
                     <div class="search-modal__input">
-                        <input type="text" name="name" value="Побег">
+                        <input id="searchInput" type="text" name="name" value="Побег">
                     </div>
                     <div class="input-icons">
                         <img src="./img/equalizer.svg" alt="equalizer">
-                        <img
-                            src="./img/input-search.svg"
-                            alt="icon-search"
-                            width="40px"
-                            height="40px"
-                            class="search"
-                        >
+                        <button>
+                            <img
+                                src="./img/input-search.svg"
+                                alt="icon-search"
+                                width="40px"
+                                height="40px"
+                                class="search"
+                            >
+                        </button>
                     </div>
                     <div class="close-modal">
                         <img src="./img/close.svg" alt="">
@@ -34,63 +36,7 @@
                 <div class="film-wrapper">
                     <h2>Фильмы</h2>
                     <div class="films">
-                        <div class="box">
-                            <div class="film-img">
-                                <img src="./img/serial.png" alt="serial">
-                            </div>
-                            <div class="film-info">
-                                <h3>Побег (сериал 2005 – 2017)</h3>
-                                <p>Prison Break</p>
-                                <span>
-                                    Боевик, триллер, драма, криминал, детектив, ...
-                                </span>
-                            </div>
-                            <div class="film-rayting">
-                                <span>8.40</span>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="film-img">
-                                <img src="./img/film.png" alt="film">
-                            </div>
-                            <div class="film-info">
-                                <h3>Побег (сериал 2005 – 2017)</h3>
-                                <p>Prison Break</p>
-                                <span>
-                                    Боевик, триллер, драма, криминал, детектив, ...
-                                </span>
-                            </div>
-                            <div class="film-rayting">
-                                <span class="red">3.20</span>
-                            </div>
-                        </div>
-                    </div>
-                    <h2>Актёры</h2>
-                    <div class="films">
-                        <div class="box">
-                            <div class="film-img">
-                                <img src="./img/aktor.png" alt="aktrisa">
-                            </div>
-                            <div class="film-info">
-                                <h3>Елена Побегаева</h3>
-                                <p>Елена Побегаева</p>
-                                <span>
-                                    Актриса
-                                </span>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="film-img">
-                                <img src="./img/foto.png" alt="foto">
-                            </div>
-                            <div class="film-info">
-                                <h3>Елена Побегаева</h3>
-                                <p>Елена Побегаева</p>
-                                <span>
-                                    Актриса
-                                </span>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -159,5 +105,6 @@
     <script src="modules/modals.js" type="module"></script>
     <script src="modules/ui.js" type="module"></script>
     <script src="modules/actor.js" type="module"></script>
+    <script type="module" src="modules/search.js"></script>
 </body>
 </html>
