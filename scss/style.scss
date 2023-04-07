@@ -6,8 +6,10 @@
 
 body {
    background-image: url("../img/body-bg.png");
+   background: radial-gradient(circle, transparent 40%, blue 75%),linear-gradient(to right, blue, blue);
    background-repeat: no-repeat;
-   background-size: cover;
+   background-size: contain;
+   background-position: top;
    background-color: rgba(25, 30, 46, 1);
    font-family: "Qanelas", "Roboto", sans-serif;
    padding-bottom: 200px;

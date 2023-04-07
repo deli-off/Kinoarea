@@ -1,13 +1,17 @@
 import { getData } from "/modules/http.request";
+let kinoCont = document.querySelector(".kino-container");
+let body = document.body
+
 
 getData(`movie/popular`)
     .then(res => reload(res.data.results))
 
-let kinoCont = document.querySelector(".kino-container");
 
 function reload(arr) {
   kinoCont.innerHTML = "";
-  console.log(arr);
+  let rnd = Math.floor(Math.random() * arr.length - 1)
+  body.style.backgroundImage = `url(${import.meta.env.VITE_IMG_URL}${arr[rnd].backdrop_path})`
+
   arr.forEach((elem) => {
     let kinocont = document.createElement("div");
     let kino = document.createElement("div");
