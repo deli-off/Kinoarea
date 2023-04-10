@@ -1,13 +1,17 @@
 import { getData } from "/modules/http.request";
-
-getData(`movie/popular`)
-    .then(res => reload(res.data.results))
-
 let kinoCont = document.querySelector(".kino-container");
+let body = document.body;
+let saveds = JSON.parse(localStorage.getItem('users')) || [];
 
-function reload(arr) {
+getData('movie/popular').then((res) => reload(res.data.results));
+
+export function reload(arr) {
   kinoCont.innerHTML = "";
-  console.log(arr);
+  let rnd = Math.floor(Math.random() * arr.length - 1);
+  body.style.backgroundImage = `url(${import.meta.env.VITE_IMG_URL}${
+    arr[rnd].backdrop_path
+  })`;
+
   arr.forEach((elem) => {
     let kinocont = document.createElement("div");
     let kino = document.createElement("div");
@@ -34,11 +38,20 @@ function reload(arr) {
     rayting.classList.add("rayting");
     kinoType.classList.add("type-kino");
 
-    kino.style.backgroundImage = `url(${import.meta.env.VITE_IMG_URL}${elem.poster_path})`;
+    kino.style.backgroundImage = `url(${import.meta.env.VITE_IMG_URL}${
+      elem.poster_path
+    })`;
 
     hoverBtn.onclick = () => {
-        location.assign('/pages/movieid.html?id=' + elem.id)
-    }
+      location.assign("/pages/movieid.html?id=" + elem.id);
+    };
+
+    ray.onclick = () => {
+      if(!saveds.includes(elem.id)) {
+        saveds.push(elem.id);
+        localStorage.setItem("users", JSON.stringify(saveds));
+      }
+    };
 
     kinoCont.append(kinocont);
     infoKino.append(hoverBtn);
