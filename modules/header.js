@@ -1,8 +1,8 @@
-import { searchModal } from "./modals"
-import { authModal } from "./modals"
+import { searchModal } from "./modals";
+import { authModal } from "./modals";
 
 export function header(place) {
-    place.innerHTML += `<header class="header">
+  place.innerHTML += `<header class="header">
                     <div class="header__logo">
                         <div class="header__logo-wrapper">
                             <img src="/header-logo.svg" alt="logo">
@@ -30,7 +30,7 @@ export function header(place) {
                                 <a href="/">Подборки</a>
                             </li>
                             <li>
-                                <a href="/">Категории</a>
+                                <a href="/pages/saved.html">Избранное</a>
                             </li>
                         </ul>
                     </nav>
@@ -43,15 +43,15 @@ export function header(place) {
                         </button>
                     </div>
                 </header>
-   `
+   `;
 
-    let searchBtn = document.querySelector('.search-btn')
-    let authBtn = document.querySelector('.auth-btn')
-    searchBtn.onclick = () => {
-        searchModal(searchBtn)
-    }
+  let searchBtn = document.querySelector(".search-btn");
+  let authBtn = document.querySelector(".auth-btn");
+  searchBtn.onclick = () => {
+    searchModal(searchBtn);
+  };
 
-    authBtn.ocnlick = () => {
-        authModal(authBtn)
-    }
+  authBtn.ocnlick = () => {
+    authModal(authBtn);
+  };
 }
