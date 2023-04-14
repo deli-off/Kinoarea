@@ -33,10 +33,11 @@ export function trailers(arr, place) {
 
     place.append(div);
 
+    
     div.onclick = () => {
       getData(`movie/${item.id}/videos`).then((res) => {
         let video = res.data.results[0];
-
+        
         trailer_video.src = `https://www.youtube.com/embed/${video.key}?rel=0&autoplay=10`;
       });
     };

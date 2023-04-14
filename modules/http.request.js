@@ -7,3 +7,9 @@ export const getData = async (path) => {
     return res
 }
 
+
+export const searchMethod = async (path, query) => {
+    const res = await axios.get(base_url + path + `?api_key=${import.meta.env.VITE_API_KEY}&language=en-US&query=${query}&page=1&include_adult=false`)
+
+    return res
+}
