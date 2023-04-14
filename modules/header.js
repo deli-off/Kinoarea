@@ -2,7 +2,7 @@ import { searchModal } from "./modals";
 import { authModal } from "./modals";
 
 export function header(place) {
-  place.innerHTML += `<header class="header">
+    place.innerHTML += `<header class="header">
                     <div class="header__logo">
                         <div class="header__logo-wrapper">
                             <img src="/img/header-logo.svg" alt="logo">
@@ -45,13 +45,38 @@ export function header(place) {
                 </header>
    `;
 
-  let searchBtn = document.querySelector(".search-btn");
-  let authBtn = document.querySelector(".auth-btn");
-  searchBtn.onclick = () => {
-    searchModal(searchBtn);
-  };
+    let searchBtn = document.querySelector(".search-btn");
+    let authBtn = document.querySelector(".auth-btn");
+    searchBtn.onclick = () => {
+        searchModal(searchBtn);
+    };
 
-  authBtn.ocnlick = () => {
-    authModal(authBtn);
-  };
+    authBtn.ocnlick = () => {
+        authModal(authBtn);
+    };
 }
+
+let headerArr = ["Премьеры", "Трейлеры", "Рецензии", "Студии", "Цитаты", "Сиквелы", "иприквелы", "Постеры", "Кадры", "Награды"]
+
+export function actorsHeader(place) {
+    place.innerHTML = ''
+    let div = document.createElement('div')
+    div.classList.add("actors_header")
+    for (let item of headerArr) {
+        let hrefs = document.createElement("a")
+        hrefs.classList.add("actors_href")
+        hrefs.innerHTML = item
+        div.append(hrefs)
+        place.append(div)
+
+        let as = div.querySelectorAll(".actors_href")
+        as.forEach(i => {
+            i.onclick = () => {
+                i.classList.toggle("active")
+            }
+        })
+    }
+
+}
+
+

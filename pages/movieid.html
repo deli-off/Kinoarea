@@ -1,32 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        <h1></h1>
-        <iframe
-            width="1280"
-            height="720"
-            title="Avatar: The Way of Water Extended Preview (2022) | Vudu"
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/scss/film.scss">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body style="background-color:#1E2538;">
+    <section class="films_main">
+        <div class="container">
+            <main>
+                <div class="headers">
+
+                </div>
+                <div class="row">
+                    <div class="left_item">
+                        <div class="film_img">
+                        </div>
+                        <div class="freed">
+                            <button class="like">
+                                <img src="/img/like.svg" alt="">
+                            </button>
+                            <button class="dislike">
+                                <img src="/img/dislike.svg" alt="">
+                            </button>
+                            <button class="reiting">
+                                <div class="inner">
+                                    <p>Рейтинг ожиданий 85%</p>
+                                </div>
+                            </button>
+                            <button class="love">
+                                <img src="/img/love.png" alt="">
+                            </button>
+                            <span>В избранном у 37933 человек </span>
+                        </div>
+                    </div>
+                    <div class="right_item">
+                        <div class="film_info">
+                            <div class="right_header">
+                                <a href="#">Главная</a>
+                                <a href="#">Фильмы</a>
+                                <a href="#">Name Film</a>
+                            </div>
+                            <div>
+                                <h2 class="title"></h2>
+
+
+                                <h3 class="sub_title"></h3>
+
+                            </div>
+                            <div>
+                                <p class="description"></p>
+                            </div>
+                            <div class="btn_trailer">
+                                <button class="film_btn">
+                                    <img src="/img/play.svg" alt="" style="width: 30px; height: 30px;">
+                                    Смотреть трейлер
+                                </button>
+                                <img src="/img/share.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+    </section>
+
+
+    <section class="informations">
+
+    </section>
+
+
+    <section class="directors">
+        <div class="container">
+            <div class="directors_box">
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="actions">
+        <div class="container">
+            <div class="all">
+                <h3>В главных ролях:</h3>
+                <h4 class="show_all" style="cursor: pointer;">Показать всех</h4>
+            </div>
+            <div class="grid">
+
+
+            </div>
+    </section>
+    <section class="actorsHeader">
+        <div class="container">
+            <div class="actors_header_box">
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <iframe width="1440px" height="720" title="Avatar: The Way of Water Extended Preview (2022) | Vudu"
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-        ></iframe>
-        <script type="module">
-		import { getData } from "/modules/http.request";
-      let iframe = document.querySelector("iframe");
-      const movie_id = location.search.split("=").at(-1);
+            allow="; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        <div class="sub_name">
+            <div class="item">
+                <span class="sub_trailer"></span>
+            </div>
+            <div class="item">
+                <button class="like">
+                    <img src="/img/like.svg" alt="">
+                </button>
+                <button class="dislike">
+                    <img src="/img/dislike.svg" alt="">
+                </button>
 
-      getData(`movie/${movie_id}/videos`).then((res) => {
-        console.log(res);
-        let video = res.data.results[0];
+            </div>
+        </div>
+    </div>
 
-        iframe.src = `https://www.youtube.com/embed/${video.key}`;
-      });
-      </script>
-    </body>
+    <section class="posters">
+        <div class="container">
+
+            <div class="title_posters">
+                <span>
+                    <h3>Постеры к Фильму</h3>
+                </span>
+                <span>
+                    <h4 class="show_all" style="cursor: pointer;">Показать все постеры</h4>
+                </span>
+            </div>
+            <div class="posters_box">
+                <div class="poster_item"></div>
+                <div class="poster_item"></div>
+                <div class="poster_item"></div>
+                <div class="poster_item"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <center>
+            <h3 style="color: #FFF;font-size: 65px; font-weight: 500;">Сиквелы и приквелы</h3>
+        </center>
+        <div class="scroll-trailers" style="margin-bottom:20px ;">
+            <div class="item"></div>
+        </div>
+    </div>
+    <script type="module" src="/modules/info.js"></script>
+</body>
+
 </html>

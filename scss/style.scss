@@ -11,6 +11,7 @@ body {
    background-color: rgba(25, 30, 46, 1);
    font-family: "Qanelas", "Roboto", sans-serif;
    padding-bottom: 200px;
+
    &::after {
       content: '';
       display: block;
@@ -18,7 +19,7 @@ body {
       width: 100%;
       position: absolute;
       bottom: -125px;
-      background: linear-gradient(transparent,rgba(25, 30, 46,.8), rgba(25, 30, 46, 1));
+      background: linear-gradient(transparent, rgba(25, 30, 46, .8), rgba(25, 30, 46, 1));
       z-index: -1;
    }
 }
@@ -74,6 +75,7 @@ a {
          gap: 60px;
 
          li {
+
             a {
                font-family: "Qanelas";
                font-style: normal;
@@ -81,6 +83,7 @@ a {
                font-size: 17px;
                line-height: 21px;
                color: #ffffff;
+               text-decoration: none;
                transition: 0.5s ease;
 
                &:hover {
@@ -752,7 +755,8 @@ a {
    margin: 50px auto;
 
 
-   h1,h4 {
+   h1,
+   h4 {
       color: white;
    }
 
@@ -800,7 +804,7 @@ a {
    grid-template-columns: repeat(4, 1fr);
    gap: 1%;
 
-   
+
 }
 
 

@@ -6,7 +6,7 @@ getData(`person/popular`)
 
 
 function actorsReload(arr) {
-   console.log(arr);
+
 
    for (let item of arr) {
       let card = document.createElement('div')
